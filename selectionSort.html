@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>selectionSort
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>AudioSort Visualizer<i class="fa-solid fa-music" style="color: #74C0FC;"></i></h1>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="bubbleSort.html" class="box-btn"  target="_main">Bubble SORT</a>
+            <a href="insertionSort.html" class="box-btn"  target="_main">Insertion Sort</a>
+            <a href="selectionSort.html" class="box-btn"  target="_main">Selection Sort</a>
+            <a href="mergeSort.html" class="box-btn"  target="_main">Merge Sort</a>
+            <a href="quickSort.html" class="box-btn"  target="_main">Quick Sort</a>
+        </nav>
+    </header>
+    <section>
+        <ul>
+            <li><p><u>SELECTION SORTING:</u></p></li>
+            <div id="box">
+                <div id="container"></div>
+
+            </div>
+            
+            <div id="btn">
+                <button id ="reStart">Restart</button>
+                <button id="play">Play</button>
+            </div>
+
+            <li><div id="code">
+                <p>Algorithm:</p>
+                <Pre>SelectionSort(array)
+                    n = length(array)
+                    
+                    // Loop through each element of the array
+                    for i from 0 to n-1 do
+                        // Assume the current position i is the minimum
+                        minIndex = i
+                        
+                        // Find the smallest element in the unsorted portion
+                        for j from i+1 to n-1 do
+                            if array[j] < array[minIndex] then
+                                minIndex = j
+                        
+                        // Swap the found minimum element with the element at position i
+                        if minIndex != i then
+                            swap(array[i], array[minIndex])
+                    
+                    // The array is now sorted
+                
+                </Pre>
+            </div></li>
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; 2024 AudioSort Visualize. All rights reserved.</p>
+    </footer>
+    <script src="selectionSort.js"></script>
+</body>
+</html>

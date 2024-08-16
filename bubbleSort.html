@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bubbleSort</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <h1>AudioSort Visualizer<i class="fa-solid fa-music" style="color: #74C0FC;"></i></h1>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="bubbleSort.html" class="box-btn"  target="_main">Bubble SORT</a>
+            <a href="insertionSort.html" class="box-btn"  target="_main">Insertion Sort</a>
+            <a href="selectionSort.html" class="box-btn"  target="_main">Selection Sort</a>
+            <a href="mergeSort.html" class="box-btn"  target="_main">Merge Sort</a>
+            <a href="quickSort.html" class="box-btn"  target="_main">Quick Sort</a>
+        </nav>
+    </header>
+    
+    <section>
+        <ul>
+            <li><p><u>BUBBLE SORTING:</u></p></li>
+            <div id="box">
+                <div id="container"></div>
+            </div>
+            
+            <div id="btn">
+                <button id ="reStart">Restart</button>
+                <button id="play">Play</button>
+            </div>
+
+            <li><div id="code">
+                <p>Algorithm:</p>
+                <Pre>Procedure BubbleSort(A: array of items)
+                    n = length(A)  // Get the number of items in the array
+                
+                    // Repeat until no more swaps are needed
+                    repeat
+                        swapped = false  // Track if any swaps are made during this pass
+                
+                        // Traverse the array from start to end - 1
+                        for i from 1 to n - 1 do
+                            // Compare adjacent items
+                            if A[i - 1] > A[i] then
+                                // Swap if out of order
+                                swap A[i - 1] with A[i]
+                                swapped = true  // Indicate a swap was made
+                
+                        // Reduce the range for the next pass
+                        n = n - 1
+                
+                    // Continue until no swaps are needed (array is sorted)
+                    while swapped
+                </Pre>
+            </div></li>
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; 2024 AudioSort Visualize. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

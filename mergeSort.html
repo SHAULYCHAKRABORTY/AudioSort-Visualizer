@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margeSort</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>AudioSort Visualizer<i class="fa-solid fa-music" style="color: #74C0FC;"></i></h1>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="bubbleSort.html" class="box-btn"  target="_main">Bubble SORT</a>
+            <a href="insertionSort.html" class="box-btn"  target="_main">Insertion Sort</a>
+            <a href="selectionSort.html" class="box-btn"  target="_main">Selection Sort</a>
+            <a href="mergeSort.html" class="box-btn"  target="_main">Merge Sort</a>
+            <a href="quickSort.html" class="box-btn"  target="_main">Quick Sort</a>
+        </nav>
+    </header>
+    <section>
+        <ul>
+            <li><p><u>MERGE SORTING:</u></p></li>
+            <div id="box">
+                <div id="container"></div>
+                
+            </div>
+            
+            <div id="btn">
+                <button id ="reStart">Restart</button>
+                <button id="play">Play</button>
+            </div>
+
+            <li><div id="code">
+                <p>Algorithm:</p>
+                <Pre>Procedure MergeSort(A, left, right)
+                    if left < right then
+                        mid = (left + right) / 2
+                        MergeSort(A, left, mid)    // Recursively sort the first half
+                        MergeSort(A, mid + 1, right) // Recursively sort the second half
+                        Merge(A, left, mid, right)  // Merge the sorted halves
+                
+                Procedure Merge(A, left, mid, right)
+                    n1 = mid - left + 1
+                    n2 = right - mid
+                    Create arrays L[1..n1+1] and R[1..n2+1]
+                    
+                    for i = 1 to n1 do
+                        L[i] = A[left + i - 1]
+                    for j = 1 to n2 do
+                        R[j] = A[mid + j]
+                
+                    L[n1 + 1] = Infinity
+                    R[n2 + 1] = Infinity
+                
+                    i = 1
+                    j = 1
+                    for k = left to right do
+                        if L[i] <= R[j] then
+                            A[k] = L[i]
+                            i = i + 1
+                        else
+                            A[k] = R[j]
+                            j = j + 1
+                
+                </Pre>
+            </div></li>
+    
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; 2024 AudioSort Visualize. All rights reserved.</p>
+    </footer>
+    <script src="merge.js"></script>
+</body>
+</html>

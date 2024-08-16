@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insersionSort</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>AudioSort Visualizer<i class="fa-solid fa-music" style="color: #74C0FC;"></i></h1>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="bubbleSort.html" class="box-btn"  target="_main">Bubble SORT</a>
+            <a href="insertionSort.html" class="box-btn"  target="_main">Insertion Sort</a>
+            <a href="selectionSort.html" class="box-btn"  target="_main">Selection Sort</a>
+            <a href="mergeSort.html" class="box-btn"  target="_main">Merge Sort</a>
+            <a href="quickSort.html" class="box-btn"  target="_main">Quick Sort</a>
+        </nav>
+    </header>
+    <section>
+        <ul>
+            <li><p><u>INSERTION SORTING:</u></p></li>
+            <div id="box">
+                <div id="container"></div>                                                                              
+            </div>
+            
+            <div id="btn">
+                <button id ="reStart">Restart</button>
+                <button id="play">Play</button>
+            </div>
+
+            <li><div id="code">
+                <p><b>Algorithm</b>:</p>
+                <Pre>Procedure InsertionSort(A: array of items)
+                    // Start from the second element (index 1) since a single element is already sorted
+                    for i from 1 to length(A) - 1 do
+                        // Current element to be compared and inserted
+                        key = A[i]
+                        
+                        // Index of the previous element
+                        j = i - 1
+                        
+                        // Move elements of A[0..i-1] that are greater than key to one position ahead
+                        while j >= 0 and A[j] > key do
+                            A[j + 1] = A[j]
+                            j = j - 1
+                        
+                        // Insert the key into its correct position
+                        A[j + 1] = key
+                
+                </Pre>
+            </div></li>
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; 2024 AudioSort Visualize. All rights reserved.</p>
+    </footer>
+    <script src="insertion.js"></script>
+    
+</body>
+</html>

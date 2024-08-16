@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quickSort</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>AudioSort Visualizer<i class="fa-solid fa-music" style="color: #74C0FC;"></i></h1>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="bubbleSort.html" class="box-btn"  target="_main">Bubble SORT</a>
+            <a href="insertionSort.html" class="box-btn"  target="_main">Insertion Sort</a>
+            <a href="selectionSort.html" class="box-btn"  target="_main">Selection Sort</a>
+            <a href="mergeSort.html" class="box-btn"  target="_main">Merge Sort</a>
+            <a href="quickSort.html" class="box-btn"  target="_main">Quick Sort</a>
+        </nav>
+    </header>
+    <section>
+        <ul>
+            <li><p><u>QUICK SORTING:</u></p></li>
+            <div id="box">
+                <div id="container"></div>
+                
+            </div>
+            
+            <div id="btn">
+                <button id ="reStart">Restart</button>
+                <button id="play">Play</button>
+            </div>
+            
+            <li><div id="code">
+                <p>Algorithm:</p>
+                <Pre>function quickSort(array, low, high):
+                    if low < high:
+                        // Partition the array and get the index of the pivot element
+                        pivotIndex = partition(array, low, high)
+                        
+                        // Recursively apply quickSort to the left and right sub-arrays
+                        quickSort(array, low, pivotIndex - 1)
+                        quickSort(array, pivotIndex + 1, high)
+                
+                function partition(array, low, high):
+                    // Choose the rightmost element as the pivot
+                    pivot = array[high]
+                    i = low - 1  // Pointer for the smaller element
+                
+                    for j = low to high - 1:
+                        // If the current element is smaller than or equal to the pivot
+                        if array[j] <= pivot:
+                            i = i + 1  // Increment the pointer for the smaller element
+                            swap(array[i], array[j])  // Swap the elements at i and j
+                
+                    // Swap the pivot element with the element at i + 1
+                    swap(array[i + 1], array[high])
+                
+                    return i + 1  // Return the partition index
+                
+                function swap(a, b):
+                    temp = a
+                    a = b
+                    b = temp
+                
+                
+                </Pre>
+            </div></li>
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; 2024 AudioSort Visualize. All rights reserved.</p>
+    </footer>
+    <script src="quickSort.js"></script>
+</body>
+</html>
